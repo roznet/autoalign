@@ -6,7 +6,9 @@ extern int yylex();
 #include "align_ast.h"
 using namespace std;
 extern AST * root;
+#pragma clang diagnostic push
 #pragma clang diagnostic ignored "-Wwritable-strings"
+#pragma clang diagnostic ignored "-Wunreachable-code"
 %}
 
 %union {
@@ -36,3 +38,4 @@ term: NUMBER
 	;
 %%
 
+#pragma clang diagnostic pop

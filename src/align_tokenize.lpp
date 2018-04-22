@@ -8,6 +8,8 @@ using namespace std;
 
 #pragma clang diagnostic push
 #pragma clang diagnostic ignored "-Wdeprecated-register"
+#pragma clang diagnostic ignored "-Wdocumentation"
+#pragma clang diagnostic ignored "-Wunused-function"
 
 %}
 %%
