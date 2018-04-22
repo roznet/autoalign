@@ -1,0 +1,38 @@
+%{
+#include <iostream>
+#include <memory>
+extern void yyerror(char*s);
+extern int yylex();
+#include "align_ast.h"
+using namespace std;
+extern AST * root;
+#pragma clang diagnostic ignored "-Wwritable-strings"
+%}
+
+%union {
+	   AST * node;
+}
+
+%token NUMBER
+%token ADD SUB MUL DIV ABS
+%token EOL
+%type <node> exp NUMBER term factor
+%%
+
+calclist:
+| calclist exp EOL { root = $2; }
+	;
+exp: factor
+	 | exp ADD factor { $$ = new AST_op(AST_op::tPlus, $1, $3); }
+	 | exp SUB factor { $$ = new AST_op(AST_op::tMinus, $1, $3); }
+	 ;
+factor: term
+	| factor MUL term { $$ = new AST_op(AST_op::tMultiply, $1, $3); }
+	| factor DIV term { $$ = new AST_op(AST_op::tDivide, $1, $3); }
+	;
+
+term: NUMBER 
+	| ABS term { $$ = $2; }
+	;
+%%
+
