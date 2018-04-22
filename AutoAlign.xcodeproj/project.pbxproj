@@ -252,6 +252,11 @@
 					427FA01A208C90AF005997D8 = {
 						CreatedOnToolsVersion = 9.3;
 						LastSwiftMigration = 0930;
+						SystemCapabilities = {
+							com.apple.ApplicationGroups.Mac = {
+								enabled = 1;
+							};
+						};
 					};
 					427FA02C208C90B0005997D8 = {
 						CreatedOnToolsVersion = 9.3;
@@ -260,6 +265,11 @@
 					427FA03F208C9190005997D8 = {
 						CreatedOnToolsVersion = 9.3;
 						LastSwiftMigration = 0930;
+						SystemCapabilities = {
+							com.apple.ApplicationGroups.Mac = {
+								enabled = 1;
+							};
+						};
 					};
 				};
 			};
