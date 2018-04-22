@@ -3,4 +3,4 @@ align
 *_grammar.cpp
 *_grammar.hpp
 *_tokenize.cpp
-
+*.o
