@@ -1,0 +1,655 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		427FA01F208C90AF005997D8 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 427FA01E208C90AF005997D8 /* AppDelegate.swift */; };
+		427FA021208C90AF005997D8 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 427FA020208C90AF005997D8 /* ViewController.swift */; };
+		427FA023208C90B0005997D8 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 427FA022208C90B0005997D8 /* Assets.xcassets */; };
+		427FA026208C90B0005997D8 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 427FA024208C90B0005997D8 /* Main.storyboard */; };
+		427FA032208C90B0005997D8 /* AutoAlignTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 427FA031208C90B0005997D8 /* AutoAlignTests.swift */; };
+		427FA043208C9190005997D8 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 427FA042208C9190005997D8 /* Cocoa.framework */; };
+		427FA046208C9190005997D8 /* SourceEditorExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 427FA045208C9190005997D8 /* SourceEditorExtension.swift */; };
+		427FA048208C9190005997D8 /* SourceEditorCommand.swift in Sources */ = {isa = PBXBuildFile; fileRef = 427FA047208C9190005997D8 /* SourceEditorCommand.swift */; };
+		427FA04D208C9190005997D8 /* XCodeExtension.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 427FA040208C9190005997D8 /* XCodeExtension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		427FA057208C9220005997D8 /* AutoAlignText.m in Sources */ = {isa = PBXBuildFile; fileRef = 427FA056208C9220005997D8 /* AutoAlignText.m */; };
+		427FA058208C9220005997D8 /* AutoAlignText.m in Sources */ = {isa = PBXBuildFile; fileRef = 427FA056208C9220005997D8 /* AutoAlignText.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		427FA02E208C90B0005997D8 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 427FA013208C90AF005997D8 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 427FA01A208C90AF005997D8;
+			remoteInfo = AutoAlign;
+		};
+		427FA04B208C9190005997D8 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 427FA013208C90AF005997D8 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 427FA03F208C9190005997D8;
+			remoteInfo = XCodeExtension;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		427FA051208C9190005997D8 /* Embed App Extensions */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 13;
+			files = (
+				427FA04D208C9190005997D8 /* XCodeExtension.appex in Embed App Extensions */,
+			);
+			name = "Embed App Extensions";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXFileReference section */
+		427FA01B208C90AF005997D8 /* AutoAlign.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AutoAlign.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		427FA01E208C90AF005997D8 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		427FA020208C90AF005997D8 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		427FA022208C90B0005997D8 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		427FA025208C90B0005997D8 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		427FA027208C90B0005997D8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		427FA028208C90B0005997D8 /* AutoAlign.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = AutoAlign.entitlements; sourceTree = "<group>"; };
+		427FA02D208C90B0005997D8 /* AutoAlignTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = AutoAlignTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		427FA031208C90B0005997D8 /* AutoAlignTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AutoAlignTests.swift; sourceTree = "<group>"; };
+		427FA033208C90B0005997D8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		427FA040208C9190005997D8 /* XCodeExtension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = XCodeExtension.appex; sourceTree = BUILT_PRODUCTS_DIR; };
+		427FA042208C9190005997D8 /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = System/Library/Frameworks/Cocoa.framework; sourceTree = SDKROOT; };
+		427FA045208C9190005997D8 /* SourceEditorExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SourceEditorExtension.swift; sourceTree = "<group>"; };
+		427FA047208C9190005997D8 /* SourceEditorCommand.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SourceEditorCommand.swift; sourceTree = "<group>"; };
+		427FA049208C9190005997D8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		427FA04A208C9190005997D8 /* XCodeExtension.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = XCodeExtension.entitlements; sourceTree = "<group>"; };
+		427FA055208C9220005997D8 /* AutoAlignText.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = AutoAlignText.h; path = src/AutoAlignText.h; sourceTree = "<group>"; };
+		427FA056208C9220005997D8 /* AutoAlignText.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = AutoAlignText.m; path = src/AutoAlignText.m; sourceTree = "<group>"; };
+		427FA05A208C936A005997D8 /* XCodeExtension-Bridging-Header.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "XCodeExtension-Bridging-Header.h"; sourceTree = "<group>"; };
+		427FA05B208C936A005997D8 /* AutoAlign-Bridging-Header.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "AutoAlign-Bridging-Header.h"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		427FA018208C90AF005997D8 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		427FA02A208C90B0005997D8 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		427FA03D208C9190005997D8 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				427FA043208C9190005997D8 /* Cocoa.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		427FA012208C90AF005997D8 = {
+			isa = PBXGroup;
+			children = (
+				427FA052208C91B8005997D8 /* AlignmentLogic */,
+				427FA01D208C90AF005997D8 /* AutoAlign */,
+				427FA030208C90B0005997D8 /* AutoAlignTests */,
+				427FA044208C9190005997D8 /* XCodeExtension */,
+				427FA041208C9190005997D8 /* Frameworks */,
+				427FA01C208C90AF005997D8 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		427FA01C208C90AF005997D8 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				427FA01B208C90AF005997D8 /* AutoAlign.app */,
+				427FA02D208C90B0005997D8 /* AutoAlignTests.xctest */,
+				427FA040208C9190005997D8 /* XCodeExtension.appex */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		427FA01D208C90AF005997D8 /* AutoAlign */ = {
+			isa = PBXGroup;
+			children = (
+				427FA01E208C90AF005997D8 /* AppDelegate.swift */,
+				427FA020208C90AF005997D8 /* ViewController.swift */,
+				427FA022208C90B0005997D8 /* Assets.xcassets */,
+				427FA024208C90B0005997D8 /* Main.storyboard */,
+				427FA027208C90B0005997D8 /* Info.plist */,
+				427FA028208C90B0005997D8 /* AutoAlign.entitlements */,
+			);
+			path = AutoAlign;
+			sourceTree = "<group>";
+		};
+		427FA030208C90B0005997D8 /* AutoAlignTests */ = {
+			isa = PBXGroup;
+			children = (
+				427FA031208C90B0005997D8 /* AutoAlignTests.swift */,
+				427FA033208C90B0005997D8 /* Info.plist */,
+			);
+			path = AutoAlignTests;
+			sourceTree = "<group>";
+		};
+		427FA041208C9190005997D8 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				427FA042208C9190005997D8 /* Cocoa.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		427FA044208C9190005997D8 /* XCodeExtension */ = {
+			isa = PBXGroup;
+			children = (
+				427FA045208C9190005997D8 /* SourceEditorExtension.swift */,
+				427FA047208C9190005997D8 /* SourceEditorCommand.swift */,
+				427FA049208C9190005997D8 /* Info.plist */,
+				427FA04A208C9190005997D8 /* XCodeExtension.entitlements */,
+			);
+			path = XCodeExtension;
+			sourceTree = "<group>";
+		};
+		427FA052208C91B8005997D8 /* AlignmentLogic */ = {
+			isa = PBXGroup;
+			children = (
+				427FA059208C936A005997D8 /* headers */,
+				427FA055208C9220005997D8 /* AutoAlignText.h */,
+				427FA056208C9220005997D8 /* AutoAlignText.m */,
+			);
+			name = AlignmentLogic;
+			sourceTree = "<group>";
+		};
+		427FA059208C936A005997D8 /* headers */ = {
+			isa = PBXGroup;
+			children = (
+				427FA05A208C936A005997D8 /* XCodeExtension-Bridging-Header.h */,
+				427FA05B208C936A005997D8 /* AutoAlign-Bridging-Header.h */,
+			);
+			path = headers;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		427FA01A208C90AF005997D8 /* AutoAlign */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 427FA036208C90B0005997D8 /* Build configuration list for PBXNativeTarget "AutoAlign" */;
+			buildPhases = (
+				427FA017208C90AF005997D8 /* Sources */,
+				427FA018208C90AF005997D8 /* Frameworks */,
+				427FA019208C90AF005997D8 /* Resources */,
+				427FA051208C9190005997D8 /* Embed App Extensions */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				427FA04C208C9190005997D8 /* PBXTargetDependency */,
+			);
+			name = AutoAlign;
+			productName = AutoAlign;
+			productReference = 427FA01B208C90AF005997D8 /* AutoAlign.app */;
+			productType = "com.apple.product-type.application";
+		};
+		427FA02C208C90B0005997D8 /* AutoAlignTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 427FA039208C90B0005997D8 /* Build configuration list for PBXNativeTarget "AutoAlignTests" */;
+			buildPhases = (
+				427FA029208C90B0005997D8 /* Sources */,
+				427FA02A208C90B0005997D8 /* Frameworks */,
+				427FA02B208C90B0005997D8 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				427FA02F208C90B0005997D8 /* PBXTargetDependency */,
+			);
+			name = AutoAlignTests;
+			productName = AutoAlignTests;
+			productReference = 427FA02D208C90B0005997D8 /* AutoAlignTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		427FA03F208C9190005997D8 /* XCodeExtension */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 427FA04E208C9190005997D8 /* Build configuration list for PBXNativeTarget "XCodeExtension" */;
+			buildPhases = (
+				427FA03C208C9190005997D8 /* Sources */,
+				427FA03D208C9190005997D8 /* Frameworks */,
+				427FA03E208C9190005997D8 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = XCodeExtension;
+			productName = XCodeExtension;
+			productReference = 427FA040208C9190005997D8 /* XCodeExtension.appex */;
+			productType = "com.apple.product-type.xcode-extension";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		427FA013208C90AF005997D8 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0930;
+				LastUpgradeCheck = 0930;
+				ORGANIZATIONNAME = "Brice Rosenzweig";
+				TargetAttributes = {
+					427FA01A208C90AF005997D8 = {
+						CreatedOnToolsVersion = 9.3;
+						LastSwiftMigration = 0930;
+					};
+					427FA02C208C90B0005997D8 = {
+						CreatedOnToolsVersion = 9.3;
+						TestTargetID = 427FA01A208C90AF005997D8;
+					};
+					427FA03F208C9190005997D8 = {
+						CreatedOnToolsVersion = 9.3;
+						LastSwiftMigration = 0930;
+					};
+				};
+			};
+			buildConfigurationList = 427FA016208C90AF005997D8 /* Build configuration list for PBXProject "AutoAlign" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 427FA012208C90AF005997D8;
+			productRefGroup = 427FA01C208C90AF005997D8 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				427FA01A208C90AF005997D8 /* AutoAlign */,
+				427FA02C208C90B0005997D8 /* AutoAlignTests */,
+				427FA03F208C9190005997D8 /* XCodeExtension */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		427FA019208C90AF005997D8 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				427FA023208C90B0005997D8 /* Assets.xcassets in Resources */,
+				427FA026208C90B0005997D8 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		427FA02B208C90B0005997D8 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		427FA03E208C9190005997D8 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		427FA017208C90AF005997D8 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				427FA021208C90AF005997D8 /* ViewController.swift in Sources */,
+				427FA057208C9220005997D8 /* AutoAlignText.m in Sources */,
+				427FA01F208C90AF005997D8 /* AppDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		427FA029208C90B0005997D8 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				427FA032208C90B0005997D8 /* AutoAlignTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		427FA03C208C9190005997D8 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				427FA046208C9190005997D8 /* SourceEditorExtension.swift in Sources */,
+				427FA058208C9220005997D8 /* AutoAlignText.m in Sources */,
+				427FA048208C9190005997D8 /* SourceEditorCommand.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		427FA02F208C90B0005997D8 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 427FA01A208C90AF005997D8 /* AutoAlign */;
+			targetProxy = 427FA02E208C90B0005997D8 /* PBXContainerItemProxy */;
+		};
+		427FA04C208C9190005997D8 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 427FA03F208C9190005997D8 /* XCodeExtension */;
+			targetProxy = 427FA04B208C9190005997D8 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		427FA024208C90B0005997D8 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				427FA025208C90B0005997D8 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		427FA034208C90B0005997D8 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "Mac Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.13;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = macosx;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		427FA035208C90B0005997D8 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "Mac Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.13;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = macosx;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+			};
+			name = Release;
+		};
+		427FA037208C90B0005997D8 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_ENTITLEMENTS = AutoAlign/AutoAlign.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				DEVELOPMENT_TEAM = M7QSSF3624;
+				INFOPLIST_FILE = AutoAlign/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "net.ro-z.AutoAlign";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "headers/AutoAlign-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 4.0;
+			};
+			name = Debug;
+		};
+		427FA038208C90B0005997D8 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_ENTITLEMENTS = AutoAlign/AutoAlign.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				DEVELOPMENT_TEAM = M7QSSF3624;
+				INFOPLIST_FILE = AutoAlign/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "net.ro-z.AutoAlign";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "headers/AutoAlign-Bridging-Header.h";
+				SWIFT_VERSION = 4.0;
+			};
+			name = Release;
+		};
+		427FA03A208C90B0005997D8 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				DEVELOPMENT_TEAM = M7QSSF3624;
+				INFOPLIST_FILE = AutoAlignTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+					"@loader_path/../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "net.ro-z.AutoAlignTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/AutoAlign.app/Contents/MacOS/AutoAlign";
+			};
+			name = Debug;
+		};
+		427FA03B208C90B0005997D8 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				DEVELOPMENT_TEAM = M7QSSF3624;
+				INFOPLIST_FILE = AutoAlignTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+					"@loader_path/../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "net.ro-z.AutoAlignTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/AutoAlign.app/Contents/MacOS/AutoAlign";
+			};
+			name = Release;
+		};
+		427FA04F208C9190005997D8 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_ENTITLEMENTS = XCodeExtension/XCodeExtension.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				DEVELOPMENT_TEAM = M7QSSF3624;
+				INFOPLIST_FILE = XCodeExtension/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+					"@executable_path/../../../../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "net.ro-z.AutoAlign.XCodeExtension";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_OBJC_BRIDGING_HEADER = "headers/XCodeExtension-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 4.0;
+			};
+			name = Debug;
+		};
+		427FA050208C9190005997D8 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_ENTITLEMENTS = XCodeExtension/XCodeExtension.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				DEVELOPMENT_TEAM = M7QSSF3624;
+				INFOPLIST_FILE = XCodeExtension/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+					"@executable_path/../../../../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "net.ro-z.AutoAlign.XCodeExtension";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_OBJC_BRIDGING_HEADER = "headers/XCodeExtension-Bridging-Header.h";
+				SWIFT_VERSION = 4.0;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		427FA016208C90AF005997D8 /* Build configuration list for PBXProject "AutoAlign" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				427FA034208C90B0005997D8 /* Debug */,
+				427FA035208C90B0005997D8 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		427FA036208C90B0005997D8 /* Build configuration list for PBXNativeTarget "AutoAlign" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				427FA037208C90B0005997D8 /* Debug */,
+				427FA038208C90B0005997D8 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		427FA039208C90B0005997D8 /* Build configuration list for PBXNativeTarget "AutoAlignTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				427FA03A208C90B0005997D8 /* Debug */,
+				427FA03B208C90B0005997D8 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		427FA04E208C9190005997D8 /* Build configuration list for PBXNativeTarget "XCodeExtension" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				427FA04F208C9190005997D8 /* Debug */,
+				427FA050208C9190005997D8 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 427FA013208C90AF005997D8 /* Project object */;
+}
