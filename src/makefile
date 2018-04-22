@@ -1,17 +1,15 @@
-
 ALIGN_SRC=align_main.cpp
-ALIGN_FLEXSRC=align_tokenize.flex
+ALIGN_FLEXSRC=align_tokenize.lpp
 ALIGN_BISONSRC=align_grammar.ypp
-ALIGN_OBJS=$(ALIGN_SRC:.cpp=.o) $(ALIGN_FLEXSRC:.flex=.o) $(ALIGN_BISONSRC:.ypp=.o)
+ALIGN_OBJS=$(ALIGN_SRC:.cpp=.o) $(ALIGN_BISONSRC:.ypp=.o) $(ALIGN_FLEXSRC:.lpp=.o) 
 ALIGN_DEPS=$(ALIGN_OBJS:.o=.d)
-
 
 FLEXSRC=$(ALIGN_FLEXSRC)
 BISONSRC=$(ALIGN_BISONSRC)
 
 DEPS=$(ALIGN_DEPS)
 
-INTERMEDIARIES=$(FLEXSRC:.flex=.cpp) $(BISONSRC:.ypp=.cpp) $(BISONSRC:.ypp=.hpp)
+INTERMEDIARIES=$(FLEXSRC:.lpp=.cpp) $(BISONSRC:.ypp=.cpp) $(BISONSRC:.ypp=.hpp)
 
 CXX=clang++
 CFLAGS=-g 
@@ -23,7 +21,7 @@ BISON=bison
 %.cpp: %.ypp
 	$(BISON) -o $@ -d $< 
 
-%.cpp: %.flex
+%.cpp: %.lpp
 	flex -o $@ $<
 
 %.d: %.cpp
@@ -43,7 +41,6 @@ align: $(ALIGN_OBJS)
 .PHONY: clean
 clean:
 	rm -fr align *.o *~ *.d align.dSYM $(INTERMEDIARIES)
-
 
 .PHONY: depend
 depend: $(DEPS)

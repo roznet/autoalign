@@ -41,8 +41,8 @@ class AutoAlignTests: XCTestCase {
     func testExample() {
         // This is an example of a functional test case.
         // Use XCTAssert and related functions to verify your tests produce the correct results.
-        let align = AutoAlignText(["a"])
-        print("\(align)")
+        let align = AutoAlignText(["2*3+1\n"])
+        print("\(align?.aligned())")
     }
 
     func testPerformanceExample() {

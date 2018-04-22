@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		42513B96208CF40A0067901E /* AutoAlignBridge.mm in Sources */ = {isa = PBXBuildFile; fileRef = 42513B95208CF40A0067901E /* AutoAlignBridge.mm */; };
+		42513B97208CF40A0067901E /* AutoAlignBridge.mm in Sources */ = {isa = PBXBuildFile; fileRef = 42513B95208CF40A0067901E /* AutoAlignBridge.mm */; };
 		427FA01F208C90AF005997D8 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 427FA01E208C90AF005997D8 /* AppDelegate.swift */; };
 		427FA021208C90AF005997D8 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 427FA020208C90AF005997D8 /* ViewController.swift */; };
 		427FA023208C90B0005997D8 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 427FA022208C90B0005997D8 /* Assets.xcassets */; };
@@ -18,7 +20,38 @@
 		427FA04D208C9190005997D8 /* XCodeExtension.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 427FA040208C9190005997D8 /* XCodeExtension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		427FA057208C9220005997D8 /* AutoAlignText.m in Sources */ = {isa = PBXBuildFile; fileRef = 427FA056208C9220005997D8 /* AutoAlignText.m */; };
 		427FA058208C9220005997D8 /* AutoAlignText.m in Sources */ = {isa = PBXBuildFile; fileRef = 427FA056208C9220005997D8 /* AutoAlignText.m */; };
+		42914FDB208CC6AC0001EE97 /* align_tokenize.lpp in Resources */ = {isa = PBXBuildFile; fileRef = 42914FD8208CC6AC0001EE97 /* align_tokenize.lpp */; };
+		42914FDC208CC6AC0001EE97 /* align_tokenize.lpp in Resources */ = {isa = PBXBuildFile; fileRef = 42914FD8208CC6AC0001EE97 /* align_tokenize.lpp */; };
+		42914FDD208CC6AC0001EE97 /* align_grammar.ypp in Sources */ = {isa = PBXBuildFile; fileRef = 42914FD9208CC6AC0001EE97 /* align_grammar.ypp */; };
+		42914FDE208CC6AC0001EE97 /* align_grammar.ypp in Sources */ = {isa = PBXBuildFile; fileRef = 42914FD9208CC6AC0001EE97 /* align_grammar.ypp */; };
+		42914FE1208CC8710001EE97 /* align_tokenize.lpp in Sources */ = {isa = PBXBuildFile; fileRef = 42914FD8208CC6AC0001EE97 /* align_tokenize.lpp */; };
+		42914FE2208CCA050001EE97 /* align_tokenize.lpp in Sources */ = {isa = PBXBuildFile; fileRef = 42914FD8208CC6AC0001EE97 /* align_tokenize.lpp */; };
 /* End PBXBuildFile section */
+
+/* Begin PBXBuildRule section */
+		42513B93208CEDF30067901E /* PBXBuildRule */ = {
+			isa = PBXBuildRule;
+			compilerSpec = com.apple.compilers.proxy.script;
+			fileType = sourcecode.yacc;
+			isEditable = 1;
+			outputFiles = (
+				"$(INPUT_FILE_DIR)/$(INPUT_FILE_BASE).hpp",
+				"$(INPUT_FILE_DIR)/$(INPUT_FILE_BASE).cpp",
+			);
+			script = "/usr/bin/bison -o ${INPUT_FILE_DIR}/${INPUT_FILE_BASE}.cpp -d ${INPUT_FILE_DIR}/${INPUT_FILE_BASE}.ypp";
+		};
+		42513B94208CEE980067901E /* PBXBuildRule */ = {
+			isa = PBXBuildRule;
+			compilerSpec = com.apple.compilers.proxy.script;
+			fileType = sourcecode.yacc;
+			isEditable = 1;
+			outputFiles = (
+				"$(INPUT_FILE_DIR)/$(INPUT_FILE_BASE).hpp",
+				"$(INPUT_FILE_DIR)/$(INPUT_FILE_BASE).cpp",
+			);
+			script = "/usr/bin/bison -o ${INPUT_FILE_DIR}/${INPUT_FILE_BASE}.cpp -d ${INPUT_FILE_DIR}/${INPUT_FILE_BASE}.ypp";
+		};
+/* End PBXBuildRule section */
 
 /* Begin PBXContainerItemProxy section */
 		427FA02E208C90B0005997D8 /* PBXContainerItemProxy */ = {
@@ -52,6 +85,8 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		42513B95208CF40A0067901E /* AutoAlignBridge.mm */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.objcpp; name = AutoAlignBridge.mm; path = src/AutoAlignBridge.mm; sourceTree = "<group>"; };
+		42513B98208CF42A0067901E /* AutoAlignBridge.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = AutoAlignBridge.h; path = src/AutoAlignBridge.h; sourceTree = "<group>"; };
 		427FA01B208C90AF005997D8 /* AutoAlign.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AutoAlign.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		427FA01E208C90AF005997D8 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		427FA020208C90AF005997D8 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -72,6 +107,10 @@
 		427FA056208C9220005997D8 /* AutoAlignText.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = AutoAlignText.m; path = src/AutoAlignText.m; sourceTree = "<group>"; };
 		427FA05A208C936A005997D8 /* XCodeExtension-Bridging-Header.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "XCodeExtension-Bridging-Header.h"; sourceTree = "<group>"; };
 		427FA05B208C936A005997D8 /* AutoAlign-Bridging-Header.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "AutoAlign-Bridging-Header.h"; sourceTree = "<group>"; };
+		42914FD7208CC6AC0001EE97 /* align_value.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; name = align_value.hpp; path = src/align_value.hpp; sourceTree = "<group>"; };
+		42914FD8208CC6AC0001EE97 /* align_tokenize.lpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.lex; name = align_tokenize.lpp; path = src/align_tokenize.lpp; sourceTree = "<group>"; };
+		42914FD9208CC6AC0001EE97 /* align_grammar.ypp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.yacc; name = align_grammar.ypp; path = src/align_grammar.ypp; sourceTree = "<group>"; };
+		42914FDA208CC6AC0001EE97 /* align_ast.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = align_ast.h; path = src/align_ast.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -166,9 +205,12 @@
 		427FA052208C91B8005997D8 /* AlignmentLogic */ = {
 			isa = PBXGroup;
 			children = (
+				42914FD6208CC68C0001EE97 /* Parsing */,
 				427FA059208C936A005997D8 /* headers */,
 				427FA055208C9220005997D8 /* AutoAlignText.h */,
 				427FA056208C9220005997D8 /* AutoAlignText.m */,
+				42513B95208CF40A0067901E /* AutoAlignBridge.mm */,
+				42513B98208CF42A0067901E /* AutoAlignBridge.h */,
 			);
 			name = AlignmentLogic;
 			sourceTree = "<group>";
@@ -180,6 +222,17 @@
 				427FA05B208C936A005997D8 /* AutoAlign-Bridging-Header.h */,
 			);
 			path = headers;
+			sourceTree = "<group>";
+		};
+		42914FD6208CC68C0001EE97 /* Parsing */ = {
+			isa = PBXGroup;
+			children = (
+				42914FDA208CC6AC0001EE97 /* align_ast.h */,
+				42914FD9208CC6AC0001EE97 /* align_grammar.ypp */,
+				42914FD8208CC6AC0001EE97 /* align_tokenize.lpp */,
+				42914FD7208CC6AC0001EE97 /* align_value.hpp */,
+			);
+			name = Parsing;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -195,6 +248,7 @@
 				427FA051208C9190005997D8 /* Embed App Extensions */,
 			);
 			buildRules = (
+				42513B94208CEE980067901E /* PBXBuildRule */,
 			);
 			dependencies = (
 				427FA04C208C9190005997D8 /* PBXTargetDependency */,
@@ -231,6 +285,7 @@
 				427FA03E208C9190005997D8 /* Resources */,
 			);
 			buildRules = (
+				42513B93208CEDF30067901E /* PBXBuildRule */,
 			);
 			dependencies = (
 			);
@@ -300,6 +355,7 @@
 			files = (
 				427FA023208C90B0005997D8 /* Assets.xcassets in Resources */,
 				427FA026208C90B0005997D8 /* Main.storyboard in Resources */,
+				42914FDB208CC6AC0001EE97 /* align_tokenize.lpp in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -314,6 +370,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				42914FDC208CC6AC0001EE97 /* align_tokenize.lpp in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -324,9 +381,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				42914FE1208CC8710001EE97 /* align_tokenize.lpp in Sources */,
 				427FA021208C90AF005997D8 /* ViewController.swift in Sources */,
+				42914FDD208CC6AC0001EE97 /* align_grammar.ypp in Sources */,
 				427FA057208C9220005997D8 /* AutoAlignText.m in Sources */,
 				427FA01F208C90AF005997D8 /* AppDelegate.swift in Sources */,
+				42513B96208CF40A0067901E /* AutoAlignBridge.mm in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -342,9 +402,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				42914FE2208CCA050001EE97 /* align_tokenize.lpp in Sources */,
 				427FA046208C9190005997D8 /* SourceEditorExtension.swift in Sources */,
+				42914FDE208CC6AC0001EE97 /* align_grammar.ypp in Sources */,
 				427FA058208C9220005997D8 /* AutoAlignText.m in Sources */,
 				427FA048208C9190005997D8 /* SourceEditorCommand.swift in Sources */,
+				42513B97208CF40A0067901E /* AutoAlignBridge.mm in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

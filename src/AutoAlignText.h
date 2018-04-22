@@ -28,5 +28,6 @@
 @interface AutoAlignText : NSObject
 
 +(AutoAlignText*)autoAlignText:(NSArray<NSString*>*)text;
-
+-(NSArray<NSString*>*)aligned;
+    
 @end
